@@ -313,4 +313,4 @@ axes[3].title.set_text('Frame 55 (Reference)')
 axes[3].axis('off')
 
 plt.show()
-f.savefig('images/outputs/full_output.png')
+fo.savefig('images/outputs/full_output.png')

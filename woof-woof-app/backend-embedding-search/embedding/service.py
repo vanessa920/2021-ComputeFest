@@ -40,7 +40,7 @@ async def generic_exception_handler(request: Request, exc: Exception):
 
 @app.on_event("startup")
 async def startup():
-    #embedding_utils.ensure_data_loaded()
+    embedding_utils.ensure_data_loaded() #uncommended
     pass
 
 @app.on_event("shutdown")
@@ -59,4 +59,4 @@ async def get_index():
     }
 
 # Additional routers here
-#app.include_router(search.router, prefix=prefix)
+app.include_router(search.router, prefix=prefix) #uncommended
