@@ -39,7 +39,7 @@ async def generic_exception_handler(request: Request, exc: Exception):
 # Application start/stop hooks
 @app.on_event("startup")
 async def startup():
-    #serving_utils.ensure_data_loaded() #uncommended
+    serving_utils.ensure_data_loaded() #uncommended
     pass
 
 @app.on_event("shutdown")
@@ -58,4 +58,4 @@ async def get_index():
     }
 
 # Additional routers here
-#app.include_router(models.router, prefix=prefix) #uncommended
+app.include_router(models.router, prefix=prefix) #uncommended
